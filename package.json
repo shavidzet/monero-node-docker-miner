@@ -1,0 +1,8 @@
+{
+  "name": "coin-hive-docker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ShavidzeT/coin-hive-docker.git",
+  "author": "Tornike Shavidze <shavidzet@gmail.com>",
+  "license": "MIT"
+}
