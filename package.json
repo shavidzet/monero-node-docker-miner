@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "git@github.com:ShavidzeT/coin-hive-docker.git",
   "author": "Tornike Shavidze <shavidzet@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "coin-hive": "^1.9.3",
+    "pm2": "^2.8.0"
+  }
 }
