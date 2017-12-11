@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -e
+
+if [ ! -f ./node_modules/@thecotne/tasker/tasker-core ]; then
+  yarn
+fi
+
+source ./node_modules/@thecotne/tasker/tasker-core
+
+function start { # start mining
+  node ./src/miner.js
+}
+
+function docker-start { # start mining in docker container
+  name='coin-hive-docker'
+  docker build -t $name .
+  docker run $name
+}
+
+function docker-destroy { # destory docker all images and containers
+  docker stop $(docker ps -a -q)
+  docker rm $(docker ps -a -q)
+  docker rmi $(docker images -q)
+}
+
+_bootstrap "${@}"

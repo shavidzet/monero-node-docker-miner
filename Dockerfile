@@ -21,4 +21,4 @@ RUN npm install
 COPY . .
 
 # EXPOSE 8080
-CMD npm start;npm run link-pm2-keymetrics;npm run pm2-install-server-monit;npm run logs
+CMD ./tasker start

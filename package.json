@@ -5,14 +5,8 @@
   "repository": "git@github.com:ShavidzeT/coin-hive-docker.git",
   "author": "Tornike Shavidze <shavidzet@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "start": "./node_modules/.bin/pm2 start src/miner.js",
-    "logs": "./node_modules/.bin/pm2 logs",
-    "link-pm2-keymetrics": "pm2 link lkmsadh248ywwhc a8ssw11hyc756g5",
-    "pm2-install-server-monit": "./node_modules/.bin/pm2 install pm2-server-monit"
-  },
   "dependencies": {
-    "coin-hive": "^1.9.3",
-    "pm2": "^2.8.0"
+    "@thecotne/tasker": "^1.2.1",
+    "coin-hive": "^1.9.3"
   }
 }

@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@thecotne/tasker@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@thecotne/tasker/-/tasker-1.2.1.tgz#b9d6eb8cea7100c568672a8049d4444f0a78055b"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
