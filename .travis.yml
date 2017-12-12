@@ -1,0 +1,13 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+before_install:
+  - npm i -S @thecotne/tasker
+  - ./tasker docker-ci-test
+
+script:
+  - echo "hello world"
