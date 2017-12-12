@@ -20,21 +20,7 @@ function docker-start { # start mining in docker container
 
 function docker-ci-test { # docker ci test
   docker build -t $IMAGE_NAME .
-  docker run $IMAGE_NAME /bin/sh -c "./tasker start" &
-  minutes=0
-  limit=1
-  while kill -0 $! >/dev/null 2>&1; do
-    echo -n -e " \b" # never leave evidences!
-
-    if [ $minutes == $limit ]; then
-      sleep 0
-      break;
-    fi
-
-    minutes=$((minutes+1))
-
-    sleep 60
-  done
+  docker run $IMAGE_NAME /bin/sh -c "./tasker start & sleep 30"
 }
 
 function docker-stop-containers { # stop all docker containers
