@@ -7,20 +7,33 @@ fi
 
 source ./node_modules/@thecotne/tasker/tasker-core
 
+IMAGE_NAME=${PWD##*/}
+
 function start { # start mining
   node ./src/miner.js
 }
 
 function docker-start { # start mining in docker container
-  name='coin-hive-docker'
-  docker build -t $name .
-  docker run $name
+  docker build -t $IMAGE_NAME .
+  docker run $IMAGE_NAME
 }
 
-function docker-destroy { # destory docker all images and containers
+function docker-stop-containers { # stop all docker containers
   docker stop $(docker ps -a -q)
+}
+
+function docker-destroy-containers { # destroy all docker containers
   docker rm $(docker ps -a -q)
+}
+
+function docker-destroy-images { # destroy all docker images
   docker rmi $(docker images -q)
+}
+
+function docker-destroy-all { # destory all docker images and containers
+  docker-stop-containers
+  docker-destroy-containers
+  docker-destroy-images
 }
 
 _bootstrap "${@}"
