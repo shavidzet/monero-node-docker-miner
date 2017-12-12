@@ -7,7 +7,7 @@ services:
 
 before_install:
   - npm i -S @thecotne/tasker
-  - ./tasker docker-ci-test
+  - ./tasker docker-start
 
 script:
   - echo "hello world"

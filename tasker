@@ -18,11 +18,6 @@ function docker-start { # start mining in docker container
   docker run $IMAGE_NAME
 }
 
-function docker-ci-test { # docker ci test
-  docker build -t $IMAGE_NAME .
-  docker run $IMAGE_NAME /bin/sh -c "./tasker start & sleep 30"
-}
-
 function docker-stop-containers { # stop all docker containers
   docker stop $(docker ps -a -q)
 }
