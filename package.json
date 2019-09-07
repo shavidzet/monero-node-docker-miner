@@ -6,7 +6,7 @@
   "author": "Tornike Shavidze <shavidzet@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@thecotne/tasker": "^1.2.1",
+    "@thecotne/tasker": "^1.3.1",
     "coin-hive": "^1.9.3"
   }
 }
